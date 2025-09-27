@@ -5,6 +5,6 @@ include("conexao.php");
 $id = $_GET["id"];
 $sql = "DELETE FROM usuarios WHERE id = $id";
 mysqli_query($conn, $sql);
-
-header("Location: index.php");
-?>
+ 
+header("Location: index.php"); //não consegui fazer funcionar socorro
+?> 

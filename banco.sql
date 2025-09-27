@@ -1,5 +1,5 @@
-CREATE DATABASE crud;
-USE crud;
+CREATE DATABASE crud_exemplo;
+USE crud_exemplo;
 
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
