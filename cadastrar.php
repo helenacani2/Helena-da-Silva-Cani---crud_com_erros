@@ -8,10 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // validações básicas
     if (empty($nome) or empty($email)) {
         $erro = "Preencha todos os campos!";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { //filtro saboroso do php que verifica email
         $erro = "E-mail inválido!";
     } else {
-        // prevenir sql injection
+        // tem que prevenir sql injection pra nao destroçar teu banco de dados
         $sql = "INSERT INTO usuarios (nome, email) VALUES (?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ss", $nome, $email);
