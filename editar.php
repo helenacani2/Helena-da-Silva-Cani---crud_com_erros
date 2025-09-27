@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $email = $_POST["email"];
 
-    $sql = "UPDATE usuarios SET nome='$nome', email='$email' WHERE id=$id";
+    $sql = "UPDATE usuarios SET nome='$nome', email='$email' WHERE id= ?";
     mysqli_query($conn, $sql);
     header("Location: index.php");
 }

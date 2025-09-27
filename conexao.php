@@ -5,9 +5,9 @@ $user = "root";
 $password = "root"; //estava vazio
 $db = "crud_exemplo";
 
-$conn = new mysqli($host, $user, $password, $bd);
+$conn = new mysqli($host, $user, $password, $bd); //tava escrito $hot
 
-if ($conn->connect_error) {
+if ($conn->connect_error) { //ele tava verificando de um jeito todo esquisito, errado e não parava se achasse erro
     die("Falha na conexão: " . $conn->connect_error);
 }
 
